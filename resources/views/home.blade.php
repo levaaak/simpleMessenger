@@ -3,18 +3,17 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+        <div class="col-sm-12">
+            <div class="card rounded">
+                <div class="card-header bg-white">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                <div class="card-body p-0">
+                    <div class="container-flex p-3">
+                        <div class="row">
+                            <div class="col-sm-3" style="border-right: 1px solid gray;">@livewire('threads.thread-list')</div>
+                            <div class="col-sm"></div>
                         </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                    </div>
                 </div>
             </div>
         </div>
